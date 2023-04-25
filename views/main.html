@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Log</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Additional custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/assignmentsStyle.css">
+
+
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <div class="nav-wrapper blue lighten-1">
+            <a href="index.html" class="brand-logo"><i class="material-icons left">local_dining</i>Recipe Log</a>
+            
+            <ul class="right">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="main.html"><i class="material-icons left">list</i>Logs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="list">
+            <h1>Your Recipes:</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Difficulty</th>
+                        <th>Meal Type</th>
+                        <th>Origin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bibimbap</td>
+                        <td>2</td>
+                        <td>Dinner</td>
+                        <td>Korea</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light teal modal-trigger" href="details.html">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Crème brûlée</td>
+                        <td>4</td>
+                        <td>Dessert</td>
+                        <td>France</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light teal modal-trigger" href="details.html">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Avocado Toast</td>
+                        <td>1</td>
+                        <td>Breakfast</td>
+                        <td>Australia</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light teal modal-trigger" href="details.html">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light red">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="add">
+            <h2>Add a Recipe:</h2>
+            <form id="addForm">
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input type="text" id="titleInput" name="title" class="validate" data-length="45" required>
+                        <label for="recipeNameInput">Recipe Name:</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input type="number" id="difficultyInput" name="difficulty" class="validate" min=1 max=5 value=1>
+                        <label for="difficultyInput">Difficulty (1-5):</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select type="number" id="mealTypeInput" name="mealTypy" id="mealTypeInput">
+                            <option value="" disabled selected>Choose a Meal Type</option>
+                            <option value=1>Breakfast</option>
+                            <option value=2>Lunch</option>
+                            <option value=3>Dinner</option>
+                            <option value=4>Dessert</option>
+                          </select>
+                          <label for="subjectInput">Meal Type:</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input type="text" id="originInput" name="origin" class="validate" data-length="25" required>
+                        <label for="originInput">Origin:</label>
+                    </div>
+
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">
+                    <i class="material-icons right">send</i>
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Auto-initialize Materialize elements -->
+    <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Additional custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/assignmentsStyle.css">
+
+
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <div class="nav-wrapper blue lighten-1">
+            <a href="index.html" class="brand-logo"><i class="material-icons left">local_dining</i>Recipe Log</a>
+            
+            <ul class="right">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="main.html"><i class="material-icons left">list</i>Logs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section flow-text" id="details">
+            <h1>Food Details</h1>
+            <table>
+                <tr>
+                    <th>Difficulty:</th>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th>Meal Type:</th>
+                    <td>Dinner</td>
+                </tr>
+                <tr>
+                    <th>Origin:</th>
+                    <td>Korea</td>
+                </tr>
+                <tr>
+                    <th>Detailed Description:</th>
+                    <td>
+                        A bowl of rice mixed with meat and assorted vegetables.
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="controls">
+            <a class="btn-large waves-effect waves-light teal left modal-trigger" href="#edit">
+                <i class="material-icons right">edit</i>
+                Edit
+            </a>
+            <a class="btn-large waves-effect waves-light red right">
+                <i class="material-icons right">delete</i>
+                Delete
+            </a>
+        </div>
+
+
+        <div class="modal" id="edit">
+            <div class="modal-content">
+                <h3>Edit Recipe:</h3>
+                <form id="updateForm">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input type="text" id="titleInput" name="title" class="validate" data-length="45" required value="Food Details">
+                            <label for="titleInput">Recipe Name:</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="number" id="priorityInput" name="priority" class="validate" min=1 max=5 value=2>
+                            <label for="priorityInput">Priority (1-5):</label>
+                        </div>
+    
+                        <div class="input-field col s6">
+                            <select type="number" id="subjectInput" name="subject" id="subjectInput">
+                                <option value="" disabled selected>Choose a Meal Type</option>
+                                <option value=1>Breakfast</option>
+                                <option value=2>Lunch</option>
+                                <option value=3>Dinner</option>
+                                <option value=4>Dessert</option>
+                              </select>
+                              <label for="subjectInput">Meal Type:</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="150">A bowl of rice mixed with meat and assorted vegetables.</textarea>
+                            <label for="descriptionInput">Detailed Description:</label>
+                        </div>
+    
+                    </div>
+                </form>
+                
+                <div class="modal-footer">
+                    
+                    <button class="btn waves-effect waves-light " type="submit" form="updateForm">
+                        <i class="material-icons right">send</i>
+                        Submit
+                    </button>
+                    <button class="modal-close waves-effect waves-green btn-flat">Cancel</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Auto-initialize Materialize elements -->
+    <script src="/scripts/materializeAutoInit.js"></script>
+
+</body>
+
+</html>
